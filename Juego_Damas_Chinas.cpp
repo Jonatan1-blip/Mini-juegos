@@ -70,17 +70,17 @@ enum TipoFicha { VACIO, CLARA, OSCURA, DAMA_CLARA, DAMA_OSCURA };
 const int TIEMPO_TURNO_SEGUNDOS = 15;
 
 void activarPantallaModoJuego() {
-    // Activa la pantalla limpia alternativa de terminal y oculta el cursor
+    
     cout << "\033[?1049h\033[?25l" << flush;
 }
 
 void desactivarPantallaModoJuego() {
-    // Restaura la pantalla original de la terminal y vuelve a mostrar el cursor
+
     cout << "\033[?25h\033[?1049l" << flush;
 }
 
 void limpiarYRedibujar() {
-    // Vuelve al inicio de la pantalla y borra el contenido residual de forma instantánea
+
     cout << "\033[1;1H\033[2J";
 }
 
